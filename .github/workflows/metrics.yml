@@ -1,0 +1,84 @@
+name: Metrics & Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 每天 00:00 UTC 自动更新
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      # 生成的所有 SVG 会由 lowlighter/metrics 自动提交回仓库，
+      # README 直接引用本地文件，不依赖任何第三方在线服务。
+
+      - name: 📅 半年度 3D 提交日历
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.isocalendar.halfyear.svg
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          base: ""
+          config_theme: dark
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+
+      - name: 📅 全年提交日历
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.calendar.full.svg
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          base: ""
+          config_theme: dark
+          plugin_calendar: yes
+          plugin_calendar_limit: 1
+
+      - name: 🐍 语言深度分析
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.languages.indepth.svg
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          base: ""
+          config_theme: dark
+          plugin_languages: yes
+          plugin_languages_ignored: "html, css"
+          plugin_languages_indepth: yes
+          plugin_languages_details: lines, percentage
+          plugin_languages_limit: 8
+          plugin_languages_analysis_timeout: 30
+          commits_authoring: ${{ github.repository_owner }}
+
+      - name: 📌 置顶项目
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.repositories.pinned.svg
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          base: ""
+          config_theme: dark
+          plugin_repositories: yes
+          plugin_repositories_pinned: 6
+
+      - name: ⭐ Star
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.stars.svg
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          base: ""
+          config_theme: dark
+          plugin_stars: yes
+          plugin_stars_limit: 3
+
+      - name: 📬 Issue / PR 跟进
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.followup.indepth.svg
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          base: ""
+          config_theme: dark
+          plugin_followup: yes
+          plugin_followup_indepth: yes
+          plugin_followup_sections: user

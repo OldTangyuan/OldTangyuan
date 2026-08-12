@@ -56,38 +56,34 @@
 
 ## 📊 GitHub 数据
 
-<!--
-  以下卡片来自第三方开源项目，自动读取你仓库的真实数据：
-  · github-readme-stats          https://github.com/anuraghazra/github-readme-stats
-  · github-readme-streak-stats   https://github.com/DenverCoder1/github-readme-streak-stats
-  · github-readme-activity-graph https://github.com/Ashutosh00710/github-readme-activity-graph
--->
+<!-- 以下卡片由 .github/workflows/metrics.yml 中的 lowlighter/metrics 自动生成并提交到仓库，不依赖任何第三方在线服务 -->
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=OldTangyuan&show_icons=true&hide_border=true&theme=github_dark&locale=zh-cn">
-    <img src="https://github-readme-stats.vercel.app/api?username=OldTangyuan&show_icons=true&hide_border=true&theme=default&locale=zh-cn" alt="GitHub Stats" height="160">
-  </picture>
-  &nbsp;&nbsp;
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=OldTangyuan&theme=dark&hide_border=true">
-    <img src="https://streak-stats.demolab.com/?user=OldTangyuan&theme=default&hide_border=true" alt="GitHub Streak" height="160">
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=OldTangyuan&theme=github-dark&hide_border=true">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=OldTangyuan&theme=github-light&hide_border=true" alt="Contribution Graph">
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=OldTangyuan&layout=compact&hide_border=true&theme=github_dark&locale=zh-cn">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OldTangyuan&layout=compact&hide_border=true&theme=default&locale=zh-cn" alt="Top Languages" height="160">
-  </picture>
-</p>
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <img src="./metrics.isocalendar.halfyear.svg" alt="半年度 3D 提交日历">
+    </td>
+    <td width="50%" valign="top">
+      <img src="./metrics.calendar.full.svg" alt="全年提交日历">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <img src="./metrics.languages.indepth.svg" alt="语言深度分析">
+    </td>
+    <td valign="top">
+      <img src="./metrics.repositories.pinned.svg" alt="置顶项目">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <img src="./metrics.stars.svg" alt="Star 统计">
+    </td>
+    <td valign="top">
+      <img src="./metrics.followup.indepth.svg" alt="Issue / PR 跟进">
+    </td>
+  </tr>
+</table>
 
 ## 📫 联系我
 
