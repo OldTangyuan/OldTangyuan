@@ -56,7 +56,18 @@
 
 ## 📊 GitHub 数据
 
-<!-- 以下卡片由 .github/workflows/metrics.yml 中的 lowlighter/metrics 自动生成并提交到仓库，不依赖任何第三方在线服务 -->
+<!--
+  · 连续打卡 / 贡献图来自仍在维护的第三方服务：
+    streak-stats.demolab.com（github-readme-streak-stats）与 github-readme-activity-graph.vercel.app
+  · 下方 6 张卡片由 .github/workflows/metrics.yml 中的 lowlighter/metrics 自动生成并提交到仓库
+-->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=OldTangyuan&theme=dark&hide_border=true">
+    <img src="https://streak-stats.demolab.com/?user=OldTangyuan&theme=default&hide_border=true" alt="GitHub Streak">
+  </picture>
+</p>
 
 <table width="100%">
   <tr>
@@ -84,6 +95,13 @@
     </td>
   </tr>
 </table>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=OldTangyuan&theme=github-dark&hide_border=true">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=OldTangyuan&theme=github-light&hide_border=true" alt="Contribution Graph">
+  </picture>
+</p>
 
 ## 📫 联系我
 
